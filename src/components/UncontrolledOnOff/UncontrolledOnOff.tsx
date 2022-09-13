@@ -1,11 +1,11 @@
 import React, {useState} from "react";
 
 type PropsType = {
-    isOnValue: boolean
-    setIsOnValue: (isOnValue: boolean) => void
 }
 
-export const OnOff = (props: PropsType) => {
+export const UncontrolledOnOff = (props: PropsType) => {
+
+    const [isOn, setIsOn] = useState(false)
 
     const onStyle = {
         display: "inline-block",
@@ -13,7 +13,7 @@ export const OnOff = (props: PropsType) => {
         height: "20px",
         border: "1px solid black",
         padding: "2px",
-        backgroundColor: props.isOnValue ? "green" : "white"
+        backgroundColor: isOn ? "green" : "white"
     }
     const offStyle = {
         display: "inline-block",
@@ -21,7 +21,7 @@ export const OnOff = (props: PropsType) => {
         height: "20px",
         border: "1px solid black",
         padding: "2px",
-        backgroundColor: props.isOnValue ? "white" : "red"
+        backgroundColor: isOn ? "white" : "red"
     }
     const indicatorStyle = {
         display: "inline-block",
@@ -30,11 +30,11 @@ export const OnOff = (props: PropsType) => {
         borderRadius: "10px",
         border: "1px solid black",
         marginLeft: "10px",
-        backgroundColor: props.isOnValue ? "green" : "red"
+        backgroundColor: isOn ? "green" : "red"
     }
 
     const onClickHandler = (isOnValue: boolean) => {
-        props.setIsOnValue(isOnValue);
+        setIsOn(isOnValue);
     }
 
     return <div>
