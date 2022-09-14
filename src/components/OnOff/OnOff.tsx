@@ -1,11 +1,11 @@
 import React from "react";
 
-type PropsType = {
+export type OnOffType = {
     isOnValue: boolean
     setIsOnValue: (isOnValue: boolean) => void
 }
 
-export const OnOff = (props: PropsType) => {
+export const OnOff = (props: OnOffType) => {
 
     const onStyle = {
         display: "inline-block",
