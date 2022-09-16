@@ -26,8 +26,8 @@ function App() {
             <hr/>
             <UncontrolledAccordion title={"Onclick Uncontrolled accordion"}/>
             <hr/>
-            <Accordion title={"Onclick accordion"} collapsed={accordionIsCollapsed}
-                       setAccordionIsCollapsed={setAccordionIsCollapsed}/>
+            {/*<Accordion title={"Onclick accordion"} collapsed={accordionIsCollapsed}*/}
+            {/*           setAccordionIsCollapsed={setAccordionIsCollapsed}/>*/}
             <hr/>
             Uncontrolled Rating
             <UncontrolledRating/>
