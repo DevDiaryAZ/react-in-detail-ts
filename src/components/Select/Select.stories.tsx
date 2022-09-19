@@ -11,7 +11,10 @@ export default {
 
 const onClickCallback = action('some item was clicked')
 
-export const CollapsedModeSelect = () => <Select items={[]} onChangeHandler={onClickCallback}/>
+export const CollapsedModeSelect = () => <Select items={[{title: "Alena", value: 1}, {
+    title: "Natasha",
+    value: 2
+}, {title: "Alisa", value: 3}]} onChangeHandler={onClickCallback}/>
 export const UncollapsedModeSelect = () => <Select items={[{title: "Alena", value: 1}, {
                                                     title: "Natasha",
                                                     value: 2
